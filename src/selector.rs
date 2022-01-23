@@ -1,10 +1,12 @@
-use std::fmt;
+use core::fmt;
 
 use log::warn;
 
 use crate::stream::Stream;
 use crate::Error;
 
+use alloc::vec;
+use alloc::vec::Vec;
 
 /// An attribute selector operator.
 #[derive(Clone, Copy, PartialEq, Debug)]

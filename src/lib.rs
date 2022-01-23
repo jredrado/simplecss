@@ -1,3 +1,6 @@
+#![no_std]
+
+
 /*!
 A simple [CSS 2.1](https://www.w3.org/TR/CSS21/) parser and selector.
 
@@ -31,7 +34,12 @@ Since it's very simple we will start with limitations:
 #![forbid(unsafe_code)]
 #![warn(missing_docs)]
 
-use std::fmt;
+
+extern crate alloc;
+
+use alloc::vec::Vec;
+
+use core::fmt;
 
 use log::warn;
 
@@ -117,7 +125,7 @@ impl fmt::Display for Error {
     }
 }
 
-impl std::error::Error for Error {}
+//impl std::error::Error for Error {}
 
 
 /// A position in text.
